@@ -9,7 +9,11 @@
 }
 
 body {
+    background-color: black;
     background-image: url("mc-background.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     overflow: hidden;
 }
@@ -37,18 +41,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 33.3%;
+  width: 25%;
 }
 
 .button {
   background: #727272;
   color: rgb(247, 247, 247);
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 0.75rem;
   margin-bottom: 0.75rem;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
   font-size: 1rem;
-  letter-spacing: 0.025em;
+  text-align: center;
+  letter-spacing: 0.05em;
   border: 2px solid rgba(0, 0, 0, 1);
   box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.5),
     inset -3px -3px 0 rgba(0, 0, 0, 0.5);
@@ -58,8 +63,8 @@ body {
 .back-button {
     background: #727272;
   color: rgb(247, 247, 247);
-  width: 33.3%;
-  padding: 0.5rem 0;
+  width: 25%;
+  padding: 0.75rem;
   margin-bottom: 0.75rem;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
   font-size: 1rem;
