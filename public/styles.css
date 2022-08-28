@@ -14,6 +14,13 @@ nav {
   font-family: minecraft;
 }
 
+.nav-footer {
+  width: 3rem;
+  height: 1rem;
+  border: 1rem;
+  background-color: black;
+}
+
 body.home-body {
   background-color: black;
   background-image: url("mc-background.webp");
@@ -45,13 +52,16 @@ body {
 }
 
 .back-container {
-  height: 100vh;
+  height: 17.5vh;
+  margin-top: 82.5vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: minecraft;
+  background-color: black;
+  opacity: 50%;
 }
 
 .home-buttons {
