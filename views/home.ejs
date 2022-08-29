@@ -2,9 +2,30 @@
 <html lang="en">
   <%- include('./partials/head.ejs') %>
 
-<body class="home-body">
+<body class="home-body" onload="move('home-title')">
   <div class="container">
-    <img src="logo.png" class="home-title">
+    <img src="logo.png" class="home-title" id="home-title">
+
+    <!-- <script>
+      var dragValue;
+
+      function move(id) {
+        let element = document.getElementById("home-title");
+        element.style.position = "absolute";
+        element.onmousedown = function() {
+          dragValue = element;
+        }
+      }
+      document.onmousemove = function(e) {
+          var x = e.pageX;
+          var y = e.pageY;
+
+          dragValue.style.left = x + "px";
+          dragValue.style.top = y + "px";
+      }
+    </script> -->
+
+
     <div class="home-buttons">
       <a class="button" href="/items">Items</a>
       <a class="button" href="/blocks">Blocks</a>
