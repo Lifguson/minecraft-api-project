@@ -1,4 +1,6 @@
-const express = require("express");
+import express from "express";
+import getItems from "./getItems.js";
+
 const app = express();
 
 app.set("view engine", "ejs");
@@ -16,7 +18,9 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/items", (req, res) => {
+  getItems().then((result) => {
   res.render("items", { title: "Items" });
+  });
 });
 
 app.get("/blocks", (req, res) => {
@@ -38,10 +42,3 @@ app.get("/biomes", (req, res) => {
 app.get("/options", (req, res) => {
   res.render("options", { title: "Options" });
 });
-
-// app.get("/quit", (req, res) => {
-//   res.render("quit", { title: "Quit" });
-// });
-
-
-
