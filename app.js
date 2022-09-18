@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import getItems from "./getItems.js";
 
 const app = express();
@@ -18,10 +18,9 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/items", (req, res) => {
-  getItems().then((result) => {
-  res.render("items", { title: "Items" });
+  
+  res.render("items", { title: "Items", });
   });
-});
 
 app.get("/blocks", (req, res) => {
   res.render("blocks", { title: "Blocks" });
