@@ -5,19 +5,14 @@
 <body>
   <%- include('./partials/nav.ejs') %>
 
+<div class="body-container">
   <div class="items-list">
     <h2>Items</h2>
-
-      <% if (items.length > 0) { %>
-        <% items.forEach(item => { %>
-          <p class="item-name"><% item.name %></p>
-        <% }) %>
-      <% } else { %>
-        <p>There are no items to display</p>
-      <% } %>
+    
+    
 
   </div>
-
+</div>
 
 </body>
 </html>

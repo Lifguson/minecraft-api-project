@@ -18,9 +18,10 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/items", (req, res) => {
-  
-  res.render("items", { title: "Items", });
+  getItems().then((items) => {
+    res.render("items", { title: "Items", items: items.name });
   });
+});
 
 app.get("/blocks", (req, res) => {
   res.render("blocks", { title: "Blocks" });
