@@ -45,13 +45,13 @@ body {
   background-color: black;
   background-image: url("dirt-background.png");
   background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  overflow: hidden;
+  background-repeat:repeat;
+  background-attachment: scroll;
+  background-size:contain;
+  overflow:auto;
 }
 
-.container {
+.body-container {
   height: 90vh;
   width: 100%;
   display: flex;
@@ -72,6 +72,7 @@ body {
   font-family: minecraft;
   background-color: black;
   opacity: 50%;
+  position: absolute; bottom: 5px;
 }
 
 .home-buttons {
@@ -114,4 +115,14 @@ body {
 
 .button:active {
   transform: translateY(5px);
+}
+
+.items-list {
+  height:fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: minecraft;
 }

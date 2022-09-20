@@ -20,6 +20,7 @@ app.get("/home", (req, res) => {
 app.get("/items", (req, res) => {
   getItems().then((result) => {
     res.render("items", { title: "Items", items: result });
+    // console.log();
   });
 });
 
