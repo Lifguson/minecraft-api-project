@@ -5,8 +5,8 @@ async function getItems() {
   const response = await fetch("https://minecraft-ids.grahamedgecombe.com/items.json");
 
   if (response.status == 200) {
-    let data = await response.json();
-    return data;
+    let result = await response.json();
+    return result;
   }
   throw new Error(response.status);
 }

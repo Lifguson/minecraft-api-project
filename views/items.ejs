@@ -9,7 +9,9 @@
   <div class="items-list">
     <h2>Items</h2>
     
-    
+    <% items.forEach((item) => { %>
+      <p class="list"><%= item.name %></p>
+    <% }) %>
 
   </div>
 </div>
