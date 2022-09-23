@@ -100,7 +100,8 @@ body {
   width: 25%;
 }
 
-/* nav, background applied to every page except home */
+/* nav, aka background applied to every page except home */
+
 nav {
   background-color: black;
   background-image: url("dirt-background.png");
