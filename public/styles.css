@@ -98,7 +98,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 25%;
-  margin-bottom: 2rem;
 }
 
 .button:hover {
@@ -118,8 +117,6 @@ body {
   height: 70vh;
   margin: auto;
   margin-top: 10vh;
-  /* display: flex;
-  flex-direction: column; */
   justify-content: center;
   align-items: center;
   font-family: minecraft;
@@ -133,7 +130,7 @@ body {
   overflow: auto;
   text-align:center;
   position: relative;
-  color: white;
+  color: rgb(247, 247, 247);
 }
 
 .item {
@@ -143,17 +140,18 @@ body {
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 17.5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: white;
+  background: rgb(247, 247, 247);
+  box-shadow: inset 0 0 5px black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: black;
-  border-radius: 50px;
-  /* border: 3px solid green; */
+  background: black;
+  border-style: ridge;
+  border-color: grey;
 }
 
 ::-webkit-scrollbar-thumb:hover {
