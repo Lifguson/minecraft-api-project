@@ -4,9 +4,8 @@
 
   <body>
     <%- include('./partials/nav.ejs') %>
-
-    <div class="items-list">
-      <div class="items-scroll">
+    <div class="items-container">
+      <div class="items-list">
         <h2>Items</h2>
         <% items.forEach((item) => { %>
         <p class="item"><%= item.name %></p>

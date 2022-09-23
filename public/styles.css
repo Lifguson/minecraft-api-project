@@ -41,6 +41,7 @@ body {
   background-attachment: fixed;
   background-size:contain;
   overflow:hidden;
+  margin: 0;
 }
 
 .body-container {
@@ -62,7 +63,6 @@ body {
   justify-content: center;
   align-items: center;
   font-family: minecraft;
-  /* background-color: black; */
   position: absolute; bottom: 5px;
   /* opacity: 50%; */
 }
@@ -109,24 +109,53 @@ body {
   transform: translateY(5px);
 }
 
-.items-list {
-  border: 2px black;
+.items-container {
   background-image: url("dirt-background-blurred.png");
-  width: 100vh;
-  height: 80vh;
-  margin-left: 100px;
-  display: flex;
-  flex-direction: column;
+  background-position: center;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  width: 100%;
+  height: 70vh;
+  margin: auto;
+  margin-top: 10vh;
+  /* display: flex;
+  flex-direction: column; */
   justify-content: center;
   align-items: center;
   font-family: minecraft;
+  position: relative;
 }
 
-.items-scroll {
-  margin: 5px; 
-  padding:5px; 
-  width: 100vh; 
-  height: 100vh; 
-  overflow: auto; 
+.items-list {
+  margin:auto;
+  width: 75vh; 
+  height: 70vh; 
+  overflow: auto;
   text-align:center;
+  position: relative;
+  color: white;
+}
+
+.item {
+  
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 50px;
+  /* border: 3px solid green; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
