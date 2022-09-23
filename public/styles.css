@@ -13,17 +13,6 @@
   transform: rotate(360deg);
 }
 
-nav {
-  background-color: black;
-  background-image: url("dirt-background.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  overflow: hidden;
-  font-family: minecraft;
-}
-
 body.home-body {
   background-color: black;
   background-image: url("mc-wallpaper-cave.jpg");
@@ -54,18 +43,7 @@ body {
   font-family: minecraft;
 }
 
-.back-container {
-  height: 17.5vh;
-  margin-top: 82.5vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: minecraft;
-  position: absolute; bottom: 5px;
-  /* opacity: 50%; */
-}
+/* main menu buttons */
 
 .home-buttons {
   display: flex;
@@ -93,6 +71,28 @@ body {
   transition-duration: 0.4s;
 }
 
+.button:hover {
+  background: rgba(115, 107, 221, 1);
+}
+
+.button:active {
+  transform: translateY(5px);
+}
+
+/* back button */
+
+.back-container {
+  height: 17.5vh;
+  margin-top: 82.5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: minecraft;
+  position: absolute; bottom: 5px;
+}
+
 .extra-buttons {
   display: flex;
   justify-content: center;
@@ -100,12 +100,16 @@ body {
   width: 25%;
 }
 
-.button:hover {
-  background: rgba(115, 107, 221, 1);
-}
-
-.button:active {
-  transform: translateY(5px);
+/* nav, background applied to every page except home */
+nav {
+  background-color: black;
+  background-image: url("dirt-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  font-family: minecraft;
 }
 
 .items-container {
@@ -133,8 +137,8 @@ body {
   color: rgb(247, 247, 247);
 }
 
-.item {
-  
+.item:hover {
+  color: grey;
 }
 
 /* Scrollbar */
