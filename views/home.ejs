@@ -3,39 +3,28 @@
   <%- include('./partials/head.ejs') %>
 
 <body class="home-body" onload="move('home-title')">
+
+  <script>
+    function playAudio(url) {
+      new Audio(url).play();
+    }
+  </script>
+
   <div class="body-container">
     <img src="logo.png" class="home-title" id="home-title">
 
-    <!-- <script>
-      var dragValue;
-
-      function move(id) {
-        let element = document.getElementById("home-title");
-        element.style.position = "absolute";
-        element.onmousedown = function() {
-          dragValue = element;
-        }
-      }
-      document.onmousemove = function(e) {
-          var x = e.pageX;
-          var y = e.pageY;
-
-          dragValue.style.left = x + "px";
-          dragValue.style.top = y + "px";
-      }
-    </script> -->
-
-
     <div class="home-buttons">
-      <a class="button" href="/items">Items</a>
-      <a class="button" href="/blocks">Blocks</a>
-      <a class="button" href="/mobs">Mobs</a>
-      <a class="button" href="/foods">Foods</a>
-      <a class="button" href="/biomes">Biomes</a>
+      <a class="button" href="/items" onclick="playAudio('../minecraft_click.mp3')">Items</a>
+      <a class="button" href="/blocks" onclick="playAudio('minecraft_click.mp3')">Blocks</a>
+      <a class="button" href="/mobs" onclick="playAudio('minecraft_click.mp3')">Mobs</a>
+      <a class="button" href="/foods" onclick="playAudio('minecraft_click.mp3')">Foods</a>
+      <a class="button" href="/biomes" onclick="playAudio('minecraft_click.mp3')">Biomes</a>
     </div>
+
     <div class="extra-buttons">
-      <a class="button" href="/options">Options</a>
+      <a class="button" href="/options" onclick="playAudio('minecraft_click.mp3')">Options</a>
     </div>
+    
   </div>
 </body>
 </html>

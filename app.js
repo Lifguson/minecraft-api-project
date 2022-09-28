@@ -25,15 +25,19 @@ app.get("/items", (req, res) => {
 });
 
 app.get("/blocks", (req, res) => {
-  res.render("blocks", { title: "Blocks" });
+  res.render("blocks", { title: "Blocks", items: result });
 });
 
 app.get("/mobs", (req, res) => {
-  res.render("mobs", { title: "Mobs" });
+  getItems().then((result) => {
+    res.render("mobs", { title: "Mobs", items: result });
+  });
 });
 
 app.get("/foods", (req, res) => {
-  res.render("foods", { title: "Foods" });
+  getItems().then((result) => {
+    res.render("foods", { title: "Foods", items: result });
+  })
 });
 
 app.get("/biomes", (req, res) => {

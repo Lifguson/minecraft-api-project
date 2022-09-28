@@ -4,5 +4,15 @@
 
 <body>
     <%- include('./partials/nav.ejs') %>
+
+    <div class="items-container">
+        <div class="items-list">
+          <h2>Foods</h2>
+          <% items.forEach((item) => { %>
+          <p class="item"><%= item.name %></p>
+          <% }) %>
+        </div>
+      </div>
+
 </body>
 </html>
