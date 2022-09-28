@@ -162,3 +162,76 @@ nav {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* biomes page */
+.biome-toggle {
+  padding: 5px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.biome-type {
+  text-align: center;
+  position: relative;
+  margin: auto;
+  padding: 5px;
+  /* border: 4px solid black; */
+  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+.biome-type:hover {
+  color: white;
+  /* box-shadow: 0 0 5px white;
+  text-shadow: 0 0 5px white; */
+  /* animation: 2s clockwise infinite; */
+  color: #fff;
+  box-shadow: inset 800px 0 0 0 darkgrey;;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+.biome:hover {
+  color: grey;
+}
+
+.biome-type:hover {
+  
+}

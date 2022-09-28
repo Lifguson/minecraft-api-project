@@ -25,7 +25,9 @@ app.get("/items", (req, res) => {
 });
 
 app.get("/blocks", (req, res) => {
-  res.render("blocks", { title: "Blocks", items: result });
+  getItems().then((result) => {
+    res.render("blocks", { title: "Blocks", items: result });
+  })
 });
 
 app.get("/mobs", (req, res) => {
