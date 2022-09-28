@@ -44,7 +44,6 @@ body {
 }
 
 /* main menu buttons */
-
 .home-buttons {
   display: flex;
   flex-direction: column;
@@ -80,7 +79,6 @@ body {
 }
 
 /* back button */
-
 .back-container {
   height: 17.5vh;
   margin-top: 82.5vh;
@@ -101,7 +99,6 @@ body {
 }
 
 /* nav, aka background applied to every page except home */
-
 nav {
   background-color: black;
   background-image: url("dirt-background.png");
@@ -143,7 +140,6 @@ nav {
 }
 
 /* Scrollbar */
-
 ::-webkit-scrollbar {
   width: 17.5px;
 }
@@ -230,8 +226,4 @@ nav {
 
 .biome:hover {
   color: grey;
-}
-
-.biome-type:hover {
-  
 }
