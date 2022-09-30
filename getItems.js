@@ -11,7 +11,4 @@ async function getItems() {
   throw new Error(response.status);
 }
 
-// const items = await getItems();
-// console.log(items);
-
 export default getItems;

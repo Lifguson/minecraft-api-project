@@ -37,7 +37,8 @@ app.get("/mobs", (req, res) => {
 });
 
 app.get("/foods", (req, res) => {
-  getItems().then((result) => {
+  getItems()
+  .then((result) => {
     res.render("foods", { title: "Foods", items: result });
   })
 });

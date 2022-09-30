@@ -8,7 +8,7 @@
     <div class="items-container">
         <div class="items-list">
           <h2>Foods</h2>
-          <% items.forEach((item) => { %>
+          <% items.filter(item => item.type == 39).forEach((item) => { %>
           <p class="item"><%= item.name %></p>
           <% }) %>
         </div>
