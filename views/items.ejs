@@ -6,7 +6,14 @@
     <%- include('./partials/nav.ejs') %>
     <div class="items-container">
       <div class="items-list">
-        <h2>Items</h2>
+        <h2>Items</h2>     
+          
+        <% const foodArray = [39, 40, 282, 295, 296, 297, 260, 322, 391, 396, 392, 393, 394, 413, 434, 435, 436, 319, 349, 363, 365, 411, 423, 320, 350, 364, 366, 412, 424] %>
+        
+        <% items = items.filter((item) => { %>
+          <% return !foodArray.includes(item.type); %>
+        <% }) %> 
+
         <% items.forEach((item) => { %>
         <p class="item"><%= item.name %></p>
         <% }) %>
