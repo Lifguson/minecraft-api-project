@@ -8,7 +8,16 @@
     <div class="items-container">
         <div class="items-list">
           <h2>Foods</h2>
-          <% items.filter(item => item.type == 39).forEach((item) => { %>
+
+          <% const foodArray = [39, 40, 282, 295, 296, 297, 260, 322, 391, 396, 392, 393, 394, 413, 434, 435, 436] %>
+          
+          <% const foodFilteredArray = items.filter((item) => { %>
+            <% return foodArray.some((f) => { %>
+              <% return f === item.type; %>
+            <% }); %>
+          <% }) %> 
+
+          <% foodFilteredArray.forEach((item) => { %>
           <p class="item"><%= item.name %></p>
           <% }) %>
         </div>
