@@ -8,19 +8,24 @@
       <div class="items-list">
         <h2>Items</h2>     
           
+        <% console.log(items.length) %> 
         <% const foodArray = [39, 40, 282, 295, 296, 297, 260, 322, 391, 396, 392, 393, 394, 413, 434, 435, 436, 319, 349, 363, 365, 411, 423, 320, 350, 364, 366, 412, 424] %>
         
         <% items = items.filter((item) => { %>
           <% return !foodArray.includes(item.type); %>
         <% }) %> 
-
         <% /* const entitiesArray = [7, 8, 9, 10, 11, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]; */ %>
         
+        <% console.log(items.length) %> 
+
         
 
         <% items.forEach((item) => { %>
         <p class="item"><%= item.name %></p>
         <% }) %>
+
+        <% console.log(items.length) %> 
+
       </div>
     </div>
 

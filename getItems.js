@@ -1,22 +1,25 @@
 import { json, response } from "express";
 import fetch from "node-fetch";
 
+// const urls = [
+//   "https://minecraft-ids.grahamedgecombe.com/items.json",
+//   "https://minecraft-ids.grahamedgecombe.com/entities.json"
+// ]
+
 async function getItems() {
-  // const response = await fetch("https://minecraft-ids.grahamedgecombe.com/items.json");
 
-  //   let result = await response.json();
-  //   return result;
-
+    const itemList = await fetch("https://minecraft-ids.grahamedgecombe.com/items.json");
   
-  try {
-      const result = await Promise.all([
-        fetch("https://minecraft-ids.grahamedgecombe.com/items.json").then(response => response.json()),
-        fetch("https://minecraft-ids.grahamedgecombe.com/entities.json").then(response => response.json())
-      ]);
-      console.log(result);
-    } catch {
-      throw Error("Promise failed");
-    }
-  }
+      let result1 = await itemList.json();
+      
+    const entitiesList = await fetch("https://minecraft-ids.grahamedgecombe.com/entities.json");
+  
+      let result2 = await entitiesList.json();
+  
+      let result = result1.concat(result2);
+      return result;
+      // console.log(result)
+}
+
 
 export default getItems;
