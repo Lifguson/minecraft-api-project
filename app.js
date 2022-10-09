@@ -1,4 +1,5 @@
 import express, { response } from "express";
+import getEntities from "./getEntities.js";
 import getItems from "./getItems.js";
 
 const app = express();
@@ -18,8 +19,10 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/items", (req, res) => {
-  getItems().then((result) => {
-    res.render("items", { title: "Items", items: result });
+  Promise.all([
+  getItems(), getEntities()
+]).then(([items, entities]) => {
+    res.render("items", { title: "Items", items: items, entities: entities });
     // console.log(result);
   });
 });

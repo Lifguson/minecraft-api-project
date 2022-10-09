@@ -10,13 +10,8 @@ async function getItems() {
 
     const itemList = await fetch("https://minecraft-ids.grahamedgecombe.com/items.json");
   
-      let result1 = await itemList.json();
-      
-    const entitiesList = await fetch("https://minecraft-ids.grahamedgecombe.com/entities.json");
-  
-      let result2 = await entitiesList.json();
-  
-      let result = result1.concat(result2);
+      let result = await itemList.json();
+
       return result;
       // console.log(result)
 }
