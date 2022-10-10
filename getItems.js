@@ -8,12 +8,13 @@ import fetch from "node-fetch";
 
 async function getItems() {
 
-    const itemList = await fetch("https://minecraft-ids.grahamedgecombe.com/items.json");
+    const response = await fetch("https://minecraft-ids.grahamedgecombe.com/items.json");
   
-      let result = await itemList.json();
+      let result = await response.json();
 
-      return result;
       // console.log(result)
+      return result;
+      
 }
 
 

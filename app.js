@@ -21,9 +21,9 @@ app.get("/home", (req, res) => {
 app.get("/items", (req, res) => {
   Promise.all([
   getItems(), getEntities()
-]).then(([items, entities]) => {
-    res.render("items", { title: "Items", items: items, entities: entities });
-    // console.log(result);
+]).then((items, entities) => {
+  // console.log(items, entities);
+    res.render("items", { title: "Items", items: result, entities: result });
   });
 });
 

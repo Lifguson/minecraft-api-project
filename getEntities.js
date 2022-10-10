@@ -2,12 +2,14 @@ import fetch from "node-fetch";
 
 async function getEntities() {
 
- const entitiesList = await fetch("https://minecraft-ids.grahamedgecombe.com/entities.json");
+ const response = await fetch("https://minecraft-ids.grahamedgecombe.com/entities.json");
   
- let result = await entitiesList.json();
+ let result = await response.json();
 
+//  console.log(result);
  return result;
+ 
+
 }
-// console.log(result);
 
 export default getEntities;
