@@ -10,10 +10,10 @@ async function getItems() {
 
     const response = await fetch("https://minecraft-ids.grahamedgecombe.com/items.json");
   
-      let result = await response.json();
+      let itemsResult = await response.json();
 
       // console.log(result)
-      return result;
+      return itemsResult;
       
 }
 

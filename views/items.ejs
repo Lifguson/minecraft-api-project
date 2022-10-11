@@ -15,6 +15,7 @@
         <% }) %> 
         <% /* const entitiesArray = [7, 8, 9, 10, 11, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]; */ %>
         
+        
 
         
 
@@ -22,6 +23,9 @@
         <p class="item"><%= item.name %></p>
         <% }) %>
 
+        <% entities.forEach((entity) => { %>
+        <p class ="item"><%= entity.name %></p>
+        <% }) %>
 
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { promiseImpl } from "ejs";
 import express, { response } from "express";
 import getEntities from "./getEntities.js";
 import getItems from "./getItems.js";
@@ -20,17 +21,18 @@ app.get("/home", (req, res) => {
 
 app.get("/items", (req, res) => {
   Promise.all([
-  getItems(), getEntities()
-]).then((items, entities) => {
-  // console.log(items, entities);
-    res.render("items", { title: "Items", items: result, entities: result });
+    getItems(),
+    getEntities()
+  ]).then(([items, entities]) => {
+  console.log(items, entities);
+    res.render("items", { title: "Items", items: items, entities: entities });
   });
 });
 
 app.get("/blocks", (req, res) => {
   getItems().then((result) => {
     res.render("blocks", { title: "Blocks", items: result });
-  })
+  });
 });
 
 app.get("/mobs", (req, res) => {
