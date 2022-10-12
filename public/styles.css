@@ -177,51 +177,11 @@ nav {
 }
 
 .biome-type:hover {
-  color: white;
   /* box-shadow: 0 0 5px white;
   text-shadow: 0 0 5px white; */
   /* animation: 2s clockwise infinite; */
-  color: #fff;
-  box-shadow: inset 800px 0 0 0 darkgrey;;
-}
-
-@keyframes clockwise {
-  0% {
-    top: -5px;
-    left: 0;
-  }
-  12% {
-    top: -2px;
-    left: 2px;
-  }
-  25% {
-    top: 0;
-    left: 5px;    
-  }
-  37% {
-    top: 2px;
-    left: 2px;
-  }
-  50% {
-    top: 5px;
-    left: 0;    
-  }
-  62% {
-    top: 2px;
-    left: -2px;
-  }
-  75% {
-    top: 0;
-    left: -5px;
-  }
-  87% {
-    top: -2px;
-    left: -2px;
-  }
-  100% {
-    top: -5px;
-    left: 0;    
-  }
+  color: black;
+  box-shadow: inset 800px 0 0 0 darkgrey;
 }
 
 .biome:hover {
