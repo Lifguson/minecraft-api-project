@@ -2,7 +2,6 @@ import { promiseImpl } from "ejs";
 import express, { response } from "express";
 import getEntities from "./getEntities.js";
 import getItems from "./getItems.js";
-import _ from 'lodash';
 
 const app = express();
 
@@ -37,8 +36,8 @@ app.get("/blocks", (req, res) => {
 });
 
 app.get("/mobs", (req, res) => {
-  getItems().then((result) => {
-    res.render("mobs", { title: "Mobs", items: result });
+  getEntities().then((result) => {
+    res.render("mobs", { title: "Mobs", entities: result });
   });
 });
 

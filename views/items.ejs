@@ -8,17 +8,19 @@
       <div class="items-list">
         <h2>Items</h2>     
           
+        <!-- filtering out all food items from the main item list, by "type" -->
         <% const foodArray = [39, 40, 282, 295, 296, 297, 260, 322, 391, 396, 392, 393, 394, 413, 434, 435, 436, 319, 349, 363, 365, 411, 423, 320, 350, 364, 366, 412, 424] %>
         
         <% items = items.filter((item) => { %>
           <% return !foodArray.includes(item.type); %>
         <% }) %> 
 
-        <% /* let mobRangeArray = _.range(50, 121); */ %>
-        <% const mobsArray = [4, 5, 27, 28, 29, 31, 32]; %>
+        <!-- filtering out all mobs from the main item list, by "type" -->
+        <% const mobsRangeFilter = Array.from(new Array(71), (x, i) => i+50); %>
+        <% const mobsArray = [4, 5, 27, 28, 29, 31, 32].concat(mobsRangeFilter); %>
         
-        <% items = items.filter((item) => { %>
-          <% return !entitiesArray.includes(item.type); %>
+        <% entities = entities.filter((entity) => { %>
+          <% return !mobsArray.includes(entity.type); %>
         <% }) %> 
 
 

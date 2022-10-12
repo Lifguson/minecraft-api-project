@@ -9,11 +9,18 @@
         <div class="items-list">
           <h2>Mobs</h2>
 
-          
+        <% const mobsRangeFilter = Array.from(new Array(71), (x, i) => i+50); %>
+        <% const mobsArray = [4, 5, 27, 28, 29, 31, 32].concat(mobsRangeFilter); %>
 
-          <% items.forEach((item) => { %>
-          <p class="item"><%= item.name %></p>
-          <% }) %>
+        <% const mobsFilteredArray = entities.filter((entity) => { %>
+          <% return mobsArray.some((m) => { %>
+            <% return m === entity.type; %>
+          <% }); %>
+        <% }) %> 
+
+          <% mobsFilteredArray.forEach((entity) => { %>
+            <p class ="item"><%= entity.name %></p>
+            <% }) %>
 
         </div>
       </div>
