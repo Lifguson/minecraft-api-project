@@ -55,3 +55,7 @@ app.get("/biomes", (req, res) => {
 app.get("/options", (req, res) => {
   res.render("options", { title: "Options" });
 });
+
+app.use((req, res) => {
+  res.status(404).render('404', { title: '404' });
+});

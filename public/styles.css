@@ -187,3 +187,15 @@ nav {
 .biome:hover {
   color: grey;
 }
+
+/* 404 page */
+.not-found-content {
+  font-family: minecraft;
+  margin:auto;
+  width: 45vh; 
+  height: 70vh; 
+  text-align:center;
+  position: relative;
+  color: rgb(247, 247, 247);
+  overflow: hidden;
+}
