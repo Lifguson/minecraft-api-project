@@ -24,7 +24,6 @@ app.get("/items", (req, res) => {
     getItems(),
     getEntities()
   ]).then(([items, entities]) => {
-  console.log(items, entities);
     res.render("items", { title: "Items", items: items, entities: entities });
   });
 });
@@ -52,8 +51,8 @@ app.get("/biomes", (req, res) => {
   res.render("biomes", { title: "Biomes" });
 });
 
-app.get("/options", (req, res) => {
-  res.render("options", { title: "Options" });
+app.get("/credits", (req, res) => {
+  res.render("credits", { title: "Credits" });
 });
 
 app.use((req, res) => {

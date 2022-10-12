@@ -189,6 +189,10 @@ nav {
 }
 
 /* 404 page */
+.not-found-container {
+  background-color: rgb(157, 157, 157);
+}
+
 .not-found-content {
   font-family: minecraft;
   margin:auto;
@@ -196,6 +200,5 @@ nav {
   height: 70vh; 
   text-align:center;
   position: relative;
-  color: rgb(247, 247, 247);
-  overflow: hidden;
+  color: black
 }
