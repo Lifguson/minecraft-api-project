@@ -2,27 +2,25 @@
 <html lang="en">
   <%- include('./partials/head.ejs') %>
 
-<body class="home-body" onload="move('home-title')">
+<body class="home-body">
 
   <script>
-    function playAudio(url) {
-      new Audio(url).play();
-    }
+    const audio = new Audio("./minecraft-click.mp3");
   </script>
 
   <div class="body-container">
     <img src="logo.png" class="home-title" id="home-title">
 
     <div class="home-buttons">
-      <a class="button" href="/items" onclick="playAudio('../minecraft_click.mp3')">Items</a>
-      <a class="button" href="/blocks" onclick="playAudio('../minecraft_click.mp3')">Blocks</a>
-      <a class="button" href="/mobs" onclick="playAudio('../minecraft_click.mp3')">Mobs</a>
-      <a class="button" href="/foods" onclick="playAudio('../minecraft_click.mp3')">Foods</a>
-      <a class="button" href="/biomes" onclick="playaudio('../minecraft_click.mp3')">Biomes</a>
+      <a class="button" href="/items" onclick="audio.play()">Items</a>
+      <a class="button" href="/blocks" onclick="audio.play()">Blocks</a>
+      <a class="button" href="/mobs" onclick="audio.play()">Mobs</a>
+      <a class="button" href="/foods" onclick="audio.play()">Foods</a>
+      <a class="button" href="/biomes" onclick="audio.play()">Biomes</a>
     </div>
 
     <div class="extra-buttons">
-      <a class="button" href="/credits">Credits</a>
+      <a class="button" href="/credits" onclick="audio.play()">Credits</a>
     </div>
     
   </div>

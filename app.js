@@ -20,10 +20,7 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/items", (req, res) => {
-  Promise.all([
-    getItems(),
-    getEntities()
-  ]).then(([items, entities]) => {
+  Promise.all([getItems(), getEntities()]).then(([items, entities]) => {
     res.render("items", { title: "Items", items: items, entities: entities });
   });
 });
@@ -41,14 +38,15 @@ app.get("/mobs", (req, res) => {
 });
 
 app.get("/foods", (req, res) => {
-  getItems()
-  .then((result) => {
+  getItems().then((result) => {
     res.render("foods", { title: "Foods", items: result });
-  })
+  });
 });
 
 app.get("/biomes", (req, res) => {
-  res.render("biomes", { title: "Biomes" });
+  setTimeout(() => {
+    res.render("biomes", { title: "Biomes" });
+  }, 500);
 });
 
 app.get("/credits", (req, res) => {
@@ -56,5 +54,5 @@ app.get("/credits", (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).render('404', { title: '404' });
+  res.status(404).render("404", { title: "404" });
 });
