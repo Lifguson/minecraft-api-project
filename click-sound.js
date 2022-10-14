@@ -1,4 +1,4 @@
-// const audio = new Audio("https://www.myinstants.com/en/instant/minecraft-click/?utm_source=copy&utm_medium=share");
+// const audio = new Audio("../minecraft_click.mp3");
 // const buttons = document.querySelectorAll("button");
 
 // buttons.forEach(button => {
