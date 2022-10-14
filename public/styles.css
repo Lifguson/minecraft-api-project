@@ -209,17 +209,29 @@ nav {
 }
 
 /* credits page - social media links */
-.media-links {
-  overflow:hidden;
+
+.credits {
+  margin:auto;
+  overflow: auto;
+  text-align:center;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 37.5vh;
-  padding-top: 16vh;
-  color: white;
 }
 
-.media-links:hover {
+.credits-button {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  padding-inline: 10px;
+  padding-top: 25vh;
+}
+
+.credits-button:hover {
   color: grey;
+}
+
+.socials-icon {
+  height: 50px;
+  width: 50px;  
 }
