@@ -139,6 +139,11 @@ nav {
   color: grey;
 }
 
+.blocks-paragraph {
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 17.5px;
@@ -201,4 +206,20 @@ nav {
   text-align:center;
   position: relative;
   color: black
+}
+
+/* credits page - social media links */
+.media-links {
+  overflow:hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 37.5vh;
+  padding-top: 16vh;
+  color: white;
+}
+
+.media-links:hover {
+  color: grey;
 }
